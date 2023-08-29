@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-primary: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  --font-headline: "ABC Ginto Nord", "Noto Sans", "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+  --primary-black: #202225;
+  --secondary-black: #2f3136;
+  --tertiary-black: #36393f;
+  --quaternary-black: #292b2f;
+  --text-primary: #b9bbbe;
+  --text-secondary: #dcddde;
+  --text-tertiary: #4f545c;
+}
+
+/* prettier-ignore */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* prettier-ignore */
+input, textarea, button, select {
+  font: inherit;
+}
+
+#root {
+  min-height: 100vh;
+  font-family: var(--font-primary);
+}
+
+body {
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  border-radius: 6px;
+  background-color: #00000050;
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+  background-color: black;
+}
+
+.label-has:has(input:checked) {
+  background-color: var(--text-tertiary);
+  color: white;
+}
+.icon-has:has(input:checked) {
+  @apply rounded-xl bg-[#3ba55d] text-white;
+}
+
+.overflow-anchor {
+  overflow-anchor: none;
+}
+//loader css
+.Loader_spinner {
+  filter: blur(1px);
+  animation: spinning82341 1.7s linear infinite;
+  box-shadow: 0px -5px 20px 0px rgb(186, 66, 255),
+    0px 5px 20px 0px rgb(0, 225, 255);
+  border-radius: 5vw;
+  background-image: linear-gradient(rgb(186, 66, 255) 35%, rgb(0, 225, 255));
+  width: 10vw;
+  height: 10vw;
+  text-align: center;
+}
+
+.Loader_spinner1 {
+  filter: blur(1px);
+  border-radius: 5vw;
+  background-color: rgb(36, 36, 36);
+  width: 10vw;
+  height: 10vw;
+}
+
+@keyframes spinning82341 {
+  to {
+    transform: rotate(360deg);
+  }
+}
